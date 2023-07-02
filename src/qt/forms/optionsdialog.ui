@@ -288,7 +288,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Peercoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the BeastBucks client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -318,7 +318,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the Peercoin network through a SOCKS5 proxy.</string>
+          <string>Connect to the BeastBucks network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -505,7 +505,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocksTor">
          <property name="toolTip">
-          <string>Connect to the Peercoin network through a separate SOCKS5 proxy for Tor onion services.</string>
+          <string>Connect to the BeastBucks network through a separate SOCKS5 proxy for Tor onion services.</string>
          </property>
          <property name="text">
           <string>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</string>
@@ -774,14 +774,14 @@
               <item>
                <widget class="QLabel" name="embeddedFont_label_1">
                 <property name="text">
-                 <string notr="true">111.11111111 PPC</string>
+                 <string notr="true">111.11111111 χξϛ</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QLabel" name="embeddedFont_label_9">
                 <property name="text">
-                 <string notr="true">909.09090909 PPC</string>
+                 <string notr="true">909.09090909 χξϛ</string>
                 </property>
                </widget>
               </item>
@@ -823,14 +823,14 @@
               <item>
                <widget class="QLabel" name="systemFont_label_1">
                 <property name="text">
-                 <string notr="true">111.11111111 PPC</string>
+                 <string notr="true">111.11111111 χξϛ</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QLabel" name="systemFont_label_9">
                 <property name="text">
-                 <string notr="true">909.09090909 PPC</string>
+                 <string notr="true">909.09090909 χξϛ</string>
                 </property>
                </widget>
               </item>

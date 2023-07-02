@@ -199,7 +199,7 @@ void MultisigDialog::on_saveMultisigAddressButton_clicked()
     if(!wallet->HaveCScript(CScriptID(script)))
         wallet->AddCScript(script);
     if(!wallet->mapAddressBook.count(DecodeDestination(address)))
-        wallet->SetAddressBook(DecodeDestination(address), label, "");  //ppcTODO - maybe add purpose instead of empty string?
+        wallet->SetAddressBook(DecodeDestination(address), label, "");  //TODO - maybe add purpose instead of empty string?
 }
 
 void MultisigDialog::clear()
@@ -433,7 +433,7 @@ void MultisigDialog::on_signTransactionButton_clicked()
     if(!ctx.isValid())
         return;
 
-    //ppcTODO - not sure how to fix this properly
+    //TODO - not sure how to fix this properly
     // Sign what we can
     bool fComplete = true;
     const CTransaction txConst(mergedTx);
@@ -502,13 +502,13 @@ void MultisigDialog::on_sendTransactionButton_clicked()
     int64_t minFee = (int64_t)(transactionSize * (PERKB_TX_FEE / 1000));
     if(fee < minFee)
     {
-        QMessageBox::StandardButton ret = QMessageBox::question(this, tr("Confirm sending transaction"), tr("The fee of the transaction (%1 PPC) is smaller than the expected fee (%2 PPC). Do you want to send the transaction anyway?").arg((double) fee / COIN).arg((double) minFee / COIN), QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Cancel);
+        QMessageBox::StandardButton ret = QMessageBox::question(this, tr("Confirm sending transaction"), tr("The fee of the transaction (%1 χξϛ) is smaller than the expected fee (%2 χξϛ). Do you want to send the transaction anyway?").arg((double) fee / COIN).arg((double) minFee / COIN), QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Cancel);
         if(ret != QMessageBox::Yes)
             return;
     }
     else if(fee > minFee)
     {
-        QMessageBox::StandardButton ret = QMessageBox::question(this, tr("Confirm sending transaction"), tr("The fee of the transaction (%1 PPC) is bigger than the expected fee (%2 PPC). Do you want to send the transaction anyway?").arg((double) fee / COIN).arg((double) minFee / COIN), QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Cancel);
+        QMessageBox::StandardButton ret = QMessageBox::question(this, tr("Confirm sending transaction"), tr("The fee of the transaction (%1 χξϛ) is bigger than the expected fee (%2 χξϛ). Do you want to send the transaction anyway?").arg((double) fee / COIN).arg((double) minFee / COIN), QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Cancel);
         if(ret != QMessageBox::Yes)
             return;
     }
@@ -548,7 +548,7 @@ void MultisigDialog::on_sendTransactionButton_clicked()
         pnode->PushInventory(inv);
     });
 
-    ui->statusLabel->setText(tr("The transaction is sent to peercoin network."));
+    ui->statusLabel->setText(tr("The transaction is sent to BeastBucks network."));
 }
 
 MultisigInputEntry * MultisigDialog::addInput()
