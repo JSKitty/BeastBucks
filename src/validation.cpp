@@ -1259,7 +1259,7 @@ PackageMempoolAcceptResult ProcessNewPackage(CChainState& active_chainstate, CTx
 int64_t GetProofOfWorkReward(unsigned int nBits)
 {
     // BeastBucks: you already know what this is ;)
-    int64_t nSubsidy = PROOF_OF_WORK_REWARD.getuint64();
+    int64_t nSubsidy = PROOF_OF_WORK_REWARD;
 
     // Make sure subsidy is a multiple of CENT
     nSubsidy = (nSubsidy / CENT) * CENT;
