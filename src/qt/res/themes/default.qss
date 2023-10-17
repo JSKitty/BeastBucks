@@ -1,9 +1,11 @@
 /* Custom Colors */
-/* Green: #3cb054 1*/
-/* Dark Grey: #8C8C8C 2*/
+/* Blood Red: #880808 1*/
+/* Custom Bright-Blood Red: #f60606 */
+/* Custom Dark-Blood Red: #640808 */
+/* Charcoal Black: #36454f 2*/
 /* Light Grey: #E3E3E3 3*/
 /* New Dark Grey: #666666 2*/
-/* New Light Grey: #8c8c8c 3*
+/* New Light Grey: #36454f 3*
 
 /* Global Styles */
 * {
@@ -19,7 +21,7 @@ QMainWindow {
 
 /* Global Styles - Buttons */
 QToolButton {
-    background: #3cb054;
+    background: #880808;
     color: #ffffff;
     border-radius: 20px;
     margin: 5px;
@@ -30,7 +32,7 @@ QToolButton {
 }
 
 QPushButton {
-    background: #3cb054;
+    background: #880808;
     color: #ffffff;
     border-radius: 20px;
     margin: 5px;
@@ -41,15 +43,15 @@ QPushButton {
 }
 
 QToolButton:checked, QPushButton:checked {
-    background: #339648;
+    background: #640808;
 }
 
 QToolButton:hover, QPushButton:hover {
-    background: #339648;
+    background: #f60606;
 }
 
 QToolButton:!enabled, QPushButton:!enabled {
-    background: #8C8C8C;
+    background: #36454f;
 }
 
 /* Global Styles - Inputs */
@@ -66,13 +68,13 @@ AmountSpinBox, QDoubleSpinBox   {
     padding: 0px;
 }
 
-/* Up and down values eg. PPC units on send */
+/* Up and down values eg. χξϛ units on send */
 AmountSpinBox::up-button, QDoubleSpinBox::up-button   {
     subcontrol-origin: border;
     subcontrol-position: top right;
     background: #ffffff;
     color: #ffffff;
-    border: 1px solid #8C8C8C;
+    border: 1px solid #36454f;
 }
 
 AmountSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover   {
@@ -132,13 +134,13 @@ QTableView {
     background: #ffffff;
     alternate-background-color: #E3E3E3;
     color: #666666;
-    gridline-color: #8C8C8C;
-    selection-background-color: #3cb054;
-    border: 1px solid #8C8C8C;
+    gridline-color: #36454f;
+    selection-background-color: #880808;
+    border: 1px solid #36454f;
  }
 
 QHeaderView::section {
-    background-color: #3cb054;
+    background-color: #880808;
     color: #ffffff;
     border-left: 0px;
     padding: 4px;
@@ -160,8 +162,8 @@ QToolTip {
 
 /* Toolbar */
 QToolBar {
-    border: 1px solid #3cb054;
-    background-color: #3cb054;
+    border: 1px solid #880808;
+    background-color: #880808;
 }
 
 QToolBar > QLabel {
@@ -205,7 +207,7 @@ QFrame {
 }
 
 #labelSendBalanceText {
-  color: #3cb054;
+  color: #880808;
   font-size: 20px;
   margin-right: 3px;
 }
@@ -233,7 +235,7 @@ QFrame QLabel#labelImmatureText,
 QFrame QLabel#labelUnconfirmedText,
 QFrame QLabel#labelPendingText,
 QFrame QLabel#labelTotalText {
-    color: #3cb054;
+    color: #880808;
     font-size: 20px;
 }
 
@@ -293,14 +295,14 @@ QLabel#logo {
 
 /* I think this is the top menu */
 QTabBar::tab {
-    background: #3cb054;
+    background: #880808;
     padding: 4px 20px;
     color: #ffffff;
     margin: 4px 1px 4px;
 }
 
 QTabBar::tab:selected {
-    background: #339648;
+    background: #f60606;
     color: #ffffff;
 }
 
@@ -320,7 +322,7 @@ QScrollBar:vertical {
     margin: 22px 0 22px 0;
 }
 QScrollBar::handle:vertical {
-    background: #8C8C8C;
+    background: #36454f;
     min-height: 20px;
 }
 QScrollBar::add-line:vertical {
