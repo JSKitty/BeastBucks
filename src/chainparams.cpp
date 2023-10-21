@@ -117,14 +117,14 @@ public:
         //vSeeds.emplace_back("seed2.peercoin.net");
         //vSeeds.emplace_back("seed.peercoin-library.org");
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,55);  // peercoin: addresses begin with 'P'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,117); // peercoin: addresses begin with 'p'
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,183);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 24);  // BeastBucks: addresses begin with 'B'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 117); // peercoin: addresses begin with 'p' (JSKitty: Wtf Peercoin docs, this can't be a P!)
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, 183);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
         // human readable prefix to bench32 address
-        bech32_hrp = "pc";
+        bech32_hrp = "beast";
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_main), std::end(chainparams_seed_main));
 
