@@ -16,9 +16,9 @@
  * for both bitcoind and bitcoin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Satoshi");
+const std::string CLIENT_NAME("Crowley");
 
-#define CLIENT_VERSION_SUFFIX " Coccinellidae"
+#define CLIENT_VERSION_SUFFIX " Mark of the Beast"
 
 #ifdef HAVE_BUILD_INFO
 #include <obj/build.h>
