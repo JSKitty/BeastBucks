@@ -1,8 +1,8 @@
 // Copyright (c) 2012-2023 The Peercoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BEASTBUCKS_KERNEL_H
-#define BEASTBUCKS_KERNEL_H
+#ifndef PEERCOIN_KERNEL_H
+#define PEERCOIN_KERNEL_H
 
 #include <primitives/transaction.h> // CTransaction(Ref)
 
@@ -68,4 +68,4 @@ unsigned int HowSuperMajority(int minVersion, const CBlockIndex* pstart, unsigne
 // peercoin: entropy bit for stake modifier if chosen by modifier
 unsigned int GetStakeEntropyBit(const CBlock& block);
 
-#endif // BEASTBUCKS_KERNEL_H
+#endif // PEERCOIN_KERNEL_H
