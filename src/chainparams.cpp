@@ -117,7 +117,7 @@ public:
         //vSeeds.emplace_back("seed2.peercoin.net");
         //vSeeds.emplace_back("seed.peercoin-library.org");
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 24);  // BeastBucks: addresses begin with 'B'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);  // BeastBucks: addresses begin with 'B'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 117); // peercoin: addresses begin with 'p' (JSKitty: Wtf Peercoin docs, this can't be a P!)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, 183);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
