@@ -90,7 +90,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "peercoin.conf";
+const char * const BITCOIN_CONF_FILENAME = "beastbucks.conf";
 const char * const BITCOIN_SETTINGS_FILENAME = "settings.json";
 
 ArgsManager gArgs;
@@ -775,7 +775,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "peercoin";
+    const char* pszModule = "beastbucks";
 #endif
     if (pex)
         return strprintf(
@@ -794,13 +794,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Peercoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Peercoin
-    // Mac: ~/Library/Application Support/Peercoin
-    // Unix: ~/.peercoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BeastBucks
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BeastBucks
+    // Mac: ~/Library/Application Support/BeastBucks
+    // Unix: ~/.beastbucks
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Peercoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "BeastBucks";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -810,10 +810,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Peercoin";
+    return pathRet / "Library/Application Support/BeastBucks";
 #else
     // Unix
-    return pathRet / ".peercoin";
+    return pathRet / ".beastbucks";
 #endif
 #endif
 }

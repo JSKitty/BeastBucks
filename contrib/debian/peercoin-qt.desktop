@@ -1,11 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Peercoin
-Comment=Desktop allet for Peercoin Cryptocurrency
-Comment[de]=Offizieller Client für die Kryptowährung Peercoin
-Exec=peercoin-qt %u
+Name=BeastBucks
+Comment=Desktop allet for BeastBucks Cryptocurrency
+Comment[de]=Offizieller Client für die Kryptowährung BeastBucks
+Exec=beastbucks-qt %u
 Terminal=false
 Type=Application
 Icon=/usr/share/pixmaps/peercoin128.png
-MimeType=x-scheme-handler/peercoin;
+MimeType=x-scheme-handler/beastbucks;
 Categories=Office;Finance;P2P;Network;Qt;

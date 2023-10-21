@@ -141,7 +141,7 @@ CMutableTransaction ConstructTransaction(const UniValue& inputs_in, const UniVal
                     rawTx.vout.push_back(out);
                     continue;
                 }
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Peercoin address: ") + name_);
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BeastBucks address: ") + name_);
             }
 
             if (!destinations.insert(destination).second) {

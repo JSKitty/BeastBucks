@@ -35,8 +35,8 @@ const std::string CLIENT_NAME("Satoshi");
     #define BUILD_DESC BUILD_GIT_TAG
     #define BUILD_SUFFIX ""
 #else
-    #define BUILD_DESC "v" STRINGIZE(PEERCOIN_VERSION_MAJOR) "." STRINGIZE(PEERCOIN_VERSION_MINOR) \
-                       "." STRINGIZE(PEERCOIN_VERSION_REVISION) "." STRINGIZE(PEERCOIN_VERSION_BUILD)
+    #define BUILD_DESC "v" STRINGIZE(BEASTBUCKS_VERSION_MAJOR) "." STRINGIZE(BEASTBUCKS_VERSION_MINOR) \
+                       "." STRINGIZE(BEASTBUCKS_VERSION_REVISION) "." STRINGIZE(BEASTBUCKS_VERSION_BUILD)
     #if CLIENT_VERSION_IS_RELEASE
         #define BUILD_SUFFIX ""
     #elif defined(BUILD_GIT_COMMIT)
@@ -76,7 +76,7 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
         ss << ")";
     }
     ss << "/";
-    ss << "Peercoin:" << FormatVersion(PEERCOIN_VERSION);
+    ss << "BeastBucks:" << FormatVersion(BEASTBUCKS_VERSION);
     ss << "(" << FormatFullVersion() << ")/";
     return ss.str();
 }

@@ -5,17 +5,17 @@ valgrind_ctime_test
 *.exe
 *.pdb
 src/*/*.exe
-src/peercoin
-src/peercoind
-src/peercoin-cli
-src/peercoin-gui
-src/peercoin-node
-src/peercoin-tx
-src/peercoin-util
-src/peercoin-wallet
+src/beastbucks
+src/beastbucksd
+src/beastbucks-cli
+src/beastbucks-gui
+src/beastbucks-node
+src/beastbucks-tx
+src/beastbucks-util
+src/beastbucks-wallet
 src/test/fuzz/fuzz
-src/test/test_peercoin
-src/qt/test/test_peercoin-qt
+src/test/test_beastbucks
+src/qt/test/test_beastbucks-qt
 
 # autoreconf
 Makefile.in
@@ -82,8 +82,7 @@ src/qt/bitcoin-qt.includes
 *.pyc
 *.o
 *.o-*
-.ppcoin
-.peercoin
+.beastbucks
 *.a
 *.pb.cc
 *.pb.h
@@ -110,17 +109,15 @@ src/qt/bitcoin-qt.includes
 *.qm
 Makefile
 !depends/Makefile
-src/qt/peercoin-qt
-PPCoin-Qt.app
-Peercoin-Qt.app
+src/qt/beastbucks-qt
+BeastBucks-Qt.app
 
 # Qt Creator
 Makefile.am.user
 
 # Unit-tests
 Makefile.test
-ppcoin-qt_test
-peercoin-qt_test
+beastbucks-qt_test
 
 # Resources cpp
 qrc_*.cpp

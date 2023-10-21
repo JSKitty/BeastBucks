@@ -1,8 +1,8 @@
 // Copyright (c) 2012-2023 The Peercoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef PEERCOIN_QT_MULTISIGADDRESSENTRY_H
-#define PEERCOIN_QT_MULTISIGADDRESSENTRY_H
+#ifndef BEASTBUCKS_QT_MULTISIGADDRESSENTRY_H
+#define BEASTBUCKS_QT_MULTISIGADDRESSENTRY_H
 
 #include <QFrame>
 
@@ -45,4 +45,4 @@ class MultisigAddressEntry : public QFrame
     void on_addressBookButton_clicked();
 };
 
-#endif // PEERCOIN_QT_MULTISIGADDRESSENTRY_H
+#endif // BEASTBUCKS_QT_MULTISIGADDRESSENTRY_H

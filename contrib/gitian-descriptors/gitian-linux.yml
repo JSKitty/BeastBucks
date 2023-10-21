@@ -1,5 +1,5 @@
 ---
-name: "peercoin-linux-0.22"
+name: "beastbucks-linux-0.22"
 enable_cache: true
 distro: "ubuntu"
 suites:

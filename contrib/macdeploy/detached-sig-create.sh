@@ -7,7 +7,7 @@ export LC_ALL=C
 set -e
 
 ROOTDIR=dist
-BUNDLE="${ROOTDIR}/Peercoin-Qt.app"
+BUNDLE="${ROOTDIR}/BeastBucks-Qt.app"
 BINARY="${BUNDLE}/Contents/MacOS/Bitcoin-Qt"
 SIGNAPPLE=signapple
 TEMPDIR=sign.temp

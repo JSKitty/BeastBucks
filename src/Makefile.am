@@ -30,7 +30,7 @@ if ENABLE_ZMQ
 LIBBITCOIN_ZMQ=libbitcoin_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libpeercoinconsensus.la
+LIBBITCOINCONSENSUS=libbeastbucksconsensus.la
 endif
 if ENABLE_WALLET
 LIBBITCOIN_WALLET=libbitcoin_wallet.a
@@ -81,29 +81,29 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += peercoind
+  bin_PROGRAMS += beastbucksd
 endif
 
 if BUILD_BITCOIN_NODE
-  bin_PROGRAMS += peercoin-node
+  bin_PROGRAMS += beastbucks-node
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += peercoin-cli
+  bin_PROGRAMS += beastbucks-cli
 endif
 
 if BUILD_BITCOIN_TX
-  bin_PROGRAMS += peercoin-tx
+  bin_PROGRAMS += beastbucks-tx
 endif
 
 if ENABLE_WALLET
 if BUILD_BITCOIN_WALLET
-  bin_PROGRAMS += peercoin-wallet
+  bin_PROGRAMS += beastbucks-wallet
 endif
 endif
 
 if BUILD_BITCOIN_UTIL
-  bin_PROGRAMS += peercoin-util
+  bin_PROGRAMS += beastbucks-util
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -300,7 +300,7 @@ BITCOIN_CORE_H = \
   zmq/zmqpublishnotifier.h \
   zmq/zmqrpc.h \
   zmq/zmqutil.h \
-## --- peercoin headers start from this line --- ##
+## --- beastbucks headers start from this line --- ##
   kernel.h \
   kernelrecord.h
 
@@ -396,7 +396,7 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between peercoind and peercoin-qt, but only linked
+# wallet: shared between beastbucksd and beastbucks-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(SQLITE_CFLAGS)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -542,7 +542,7 @@ libbitcoin_consensus_a_SOURCES = \
   util/strencodings.h \
   version.h
 
-# common: shared between peercoind, and peercoin-qt and non-server tools
+# common: shared between beastbucksd, and beastbucks-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -628,7 +628,7 @@ if USE_LIBEVENT
 libbitcoin_util_a_SOURCES += util/url.cpp
 endif
 
-# cli: shared between peercoin-cli and peercoin-qt
+# cli: shared between beastbucks-cli and beastbucks-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -665,66 +665,66 @@ bitcoin_bin_ldadd = \
 
 bitcoin_bin_ldadd += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS) $(CRYPTO_LIBS)
 
-peercoind_SOURCES = $(bitcoin_daemon_sources) init/bitcoind.cpp
-peercoind_CPPFLAGS = $(bitcoin_bin_cppflags)
-peercoind_CXXFLAGS = $(bitcoin_bin_cxxflags)
-peercoind_LDFLAGS = $(bitcoin_bin_ldflags)
-peercoind_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd)
+beastbucksd_SOURCES = $(bitcoin_daemon_sources) init/bitcoind.cpp
+beastbucksd_CPPFLAGS = $(bitcoin_bin_cppflags)
+beastbucksd_CXXFLAGS = $(bitcoin_bin_cxxflags)
+beastbucksd_LDFLAGS = $(bitcoin_bin_ldflags)
+beastbucksd_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd)
 
-peercoin_node_SOURCES = $(bitcoin_daemon_sources) init/bitcoin-node.cpp
-peercoin_node_CPPFLAGS = $(bitcoin_bin_cppflags)
-peercoin_node_CXXFLAGS = $(bitcoin_bin_cxxflags)
-peercoin_node_LDFLAGS = $(bitcoin_bin_ldflags)
-peercoin_node_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
+beastbucks_node_SOURCES = $(bitcoin_daemon_sources) init/bitcoin-node.cpp
+beastbucks_node_CPPFLAGS = $(bitcoin_bin_cppflags)
+beastbucks_node_CXXFLAGS = $(bitcoin_bin_cxxflags)
+beastbucks_node_LDFLAGS = $(bitcoin_bin_ldflags)
+beastbucks_node_LDADD = $(LIBBITCOIN_NODE) $(bitcoin_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
 
-# peercoin-cli binary #
-peercoin_cli_SOURCES = bitcoin-cli.cpp
-peercoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-peercoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-peercoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# beastbucks-cli binary #
+beastbucks_cli_SOURCES = bitcoin-cli.cpp
+beastbucks_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+beastbucks_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+beastbucks_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-peercoin_cli_SOURCES += bitcoin-cli-res.rc
+beastbucks_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-peercoin_cli_LDADD = \
+beastbucks_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-peercoin_cli_LDADD += $(CRYPTO_LIBS) $(EVENT_LIBS)
+beastbucks_cli_LDADD += $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# peercoin-tx binary #
-peercoin_tx_SOURCES = \
+# beastbucks-tx binary #
+beastbucks_tx_SOURCES = \
   bitcoin-tx.cpp \
   timedatadummy.cpp
-peercoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-peercoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-peercoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+beastbucks_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+beastbucks_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+beastbucks_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-peercoin_tx_SOURCES += bitcoin-tx-res.rc
+beastbucks_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-peercoin_tx_LDADD = \
+beastbucks_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CONSENSUS) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
-peercoin_tx_LDADD += $(CRYPTO_LIBS)
+beastbucks_tx_LDADD += $(CRYPTO_LIBS)
 #
 
 # bitcoin-wallet binary #
-peercoin_wallet_SOURCES = bitcoin-wallet.cpp
-peercoin_wallet_SOURCES += init/bitcoin-wallet.cpp
-peercoin_wallet_CPPFLAGS = $(bitcoin_bin_cppflags)
-peercoin_wallet_CXXFLAGS = $(bitcoin_bin_cxxflags)
-peercoin_wallet_LDFLAGS = $(bitcoin_bin_ldflags)
-peercoin_wallet_LDADD = \
+beastbucks_wallet_SOURCES = bitcoin-wallet.cpp
+beastbucks_wallet_SOURCES += init/bitcoin-wallet.cpp
+beastbucks_wallet_CPPFLAGS = $(bitcoin_bin_cppflags)
+beastbucks_wallet_CXXFLAGS = $(bitcoin_bin_cxxflags)
+beastbucks_wallet_LDFLAGS = $(bitcoin_bin_ldflags)
+beastbucks_wallet_LDADD = \
   $(LIBBITCOIN_WALLET_TOOL) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_NODE) \
@@ -743,21 +743,21 @@ peercoin_wallet_LDADD = \
   $(CRYPTO_LIBS)
 
 if TARGET_WINDOWS
-peercoin_wallet_SOURCES += bitcoin-wallet-res.rc
+beastbucks_wallet_SOURCES += bitcoin-wallet-res.rc
 endif
 #
 
 # bitcoin-util binary #
-peercoin_util_SOURCES = bitcoin-util.cpp
-peercoin_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-peercoin_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-peercoin_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+beastbucks_util_SOURCES = bitcoin-util.cpp
+beastbucks_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+beastbucks_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+beastbucks_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-peercoin_util_SOURCES += bitcoin-util-res.rc
+beastbucks_util_SOURCES += bitcoin-util-res.rc
 endif
 
-peercoin_util_LDADD = \
+beastbucks_util_LDADD = \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBUNIVALUE) \
@@ -766,15 +766,15 @@ peercoin_util_LDADD = \
   $(LIBSECP256K1)
 #
 
-# peercoinconsensus library #
+# beastbucksconsensus library #
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h
-libpeercoinconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libbitcoin_crypto_base_a_SOURCES) $(libbitcoin_consensus_a_SOURCES)
+libbeastbucksconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libbitcoin_crypto_base_a_SOURCES) $(libbitcoin_consensus_a_SOURCES)
 
-libpeercoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libpeercoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libpeercoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libpeercoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbeastbucksconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libbeastbucksconsensus_la_LIBADD = $(LIBSECP256K1)
+libbeastbucksconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libbeastbucksconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

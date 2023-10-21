@@ -43,7 +43,7 @@ script: |
   cd ..
 
   UNSIGNED_TARBALL=peercoin-osx-unsigned.tar.gz
-  UNSIGNED_APP=dist/Peercoin-Qt.app
+  UNSIGNED_APP=dist/BeastBucks-Qt.app
   SIGNED=peercoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED_TARBALL}
