@@ -417,17 +417,11 @@ void BitcoinGUI::createActions()
     showHelpMessageAction->setMenuRole(QAction::NoRole);
     showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible BeastBucks command-line options").arg(PACKAGE_NAME));
 
-    openWebAction = new QAction(tr("&Website"), this);
-    openWebAction->setStatusTip(tr("Open the BeastBucks website in a web browser."));
+    openThelemaTubeAction = new QAction(tr("&Thelema.Tube"), this);
+    openThelemaTubeAction->setStatusTip(tr("Open the Thelema.Tube channel in your browser."));
 
-    openDonateAction = new QAction(tr("&Donate"), this);
-    openDonateAction->setStatusTip(tr("Finacially support development of the BeastBucks project."));
-
-    openChatroomAction = new QAction(tr("&Chatroom"), this);
-    openChatroomAction->setStatusTip(tr("Open the BeastBucks Discord chat in a web browser."));
-
-    openForumAction = new QAction(tr("&Forum"), this);
-    openForumAction->setStatusTip(tr("Open talk.peercoin.net in a web browser."));
+    openDiscordAction = new QAction(tr("&Discord"), this);
+    openDiscordAction->setStatusTip(tr("Open the AγαπηΘελημα Discord."));
 
     m_mask_values_action = new QAction(tr("&Mask values"), this);
     m_mask_values_action->setShortcut(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_M));
@@ -443,10 +437,8 @@ void BitcoinGUI::createActions()
     // prevents an open debug window from becoming stuck/unusable on client shutdown
     connect(quitAction, &QAction::triggered, rpcConsole, &QWidget::hide);
 
-    connect(openWebAction, SIGNAL(triggered()), this, SLOT(openWeb()));
-    connect(openDonateAction, SIGNAL(triggered()), this, SLOT(openDonate()));
-    connect(openChatroomAction, SIGNAL(triggered()), this, SLOT(openChatroom()));
-    connect(openForumAction, SIGNAL(triggered()), this, SLOT(openForum()));
+    connect(openThelemaTubeAction, SIGNAL(triggered()), this, SLOT(openThelemaTube()));
+    connect(openDiscordAction, SIGNAL(triggered()), this, SLOT(openDiscord()));
 
 #ifdef ENABLE_WALLET
     if(walletFrame)
@@ -603,10 +595,8 @@ void BitcoinGUI::createMenuBar()
     }
 
     QMenu *help = appMenuBar->addMenu(tr("&Help"));
-    help->addAction(openWebAction);
-    help->addAction(openDonateAction);
-    help->addAction(openChatroomAction);
-    help->addAction(openForumAction);
+    help->addAction(openThelemaTubeAction);
+    help->addAction(openDiscordAction);
     help->addAction(showHelpMessageAction);
     help->addSeparator();
     help->addAction(aboutAction);
@@ -1023,20 +1013,12 @@ void BitcoinGUI::gotoLoadPSBT(bool from_clipboard)
     if (walletFrame) walletFrame->gotoLoadPSBT(from_clipboard);
 }
 
-void BitcoinGUI::openWeb() {
-    QDesktopServices::openUrl(QUrl("https://peercoin.net"));
+void BitcoinGUI::openThelemaTube() {
+    QDesktopServices::openUrl(QUrl("http://thelema.tube/"));
 }
 
-void BitcoinGUI::openDonate() {
-    QDesktopServices::openUrl(QUrl("https://www.peercoin.net/foundation"));
-}
-
-void BitcoinGUI::openChatroom() {
-    QDesktopServices::openUrl(QUrl("https://discord.gg/XPxfwtG"));
-}
-
-void BitcoinGUI::openForum() {
-    QDesktopServices::openUrl(QUrl("https://talk.peercoin.net"));
+void BitcoinGUI::openDiscord() {
+    QDesktopServices::openUrl(QUrl("https://discord.gg/thelema"));
 }
 
 #endif // ENABLE_WALLET

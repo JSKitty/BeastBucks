@@ -166,10 +166,8 @@ private:
     QMenu* m_open_wallet_menu{nullptr};
     QAction* m_close_wallet_action{nullptr};
     QAction* m_close_all_wallets_action{nullptr};
-    QAction* openWebAction = nullptr;
-    QAction* openDonateAction = nullptr;
-    QAction* openChatroomAction = nullptr;
-    QAction* openForumAction = nullptr;
+    QAction* openThelemaTubeAction = nullptr;
+    QAction* openDiscordAction = nullptr;
     QAction* m_wallet_selector_label_action = nullptr;
     QAction* m_wallet_selector_action = nullptr;
     QAction* m_mask_values_action{nullptr};
@@ -317,10 +315,8 @@ public Q_SLOTS:
     void showHelpMessageClicked();
 
     // Open chatroom / forum URL in the system's browser.
-    void openWeb();
-    void openDonate();
-    void openChatroom();
-    void openForum();
+    void openThelemaTube();
+    void openDiscord();
 
 
     /** Show window if hidden, unminimize when minimized, rise when obscured or show if hidden and fToggleHidden is true */
