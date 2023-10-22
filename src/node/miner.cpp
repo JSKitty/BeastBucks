@@ -567,7 +567,8 @@ void PoSMiner(std::shared_ptr<CWallet> pwallet, NodeContext& m_node)
     std::string strMintDisabledMessage = _("Info: Minting disabled by 'nominting' option.").translated;
     std::string strMintBlockMessage = _("Info: Minting suspended due to block creation failure.").translated;
     std::string strMintEmpty = "";
-    if (!gArgs.GetBoolArg("-minting", true) || !gArgs.GetBoolArg("-staking", true))
+    // BeastBucksTODO: swap args to `true` again if we want to re-enable minting, need to test this quite a bit beforehand
+    if (!gArgs.GetBoolArg("-minting", false) || !gArgs.GetBoolArg("-staking", false))
     {
         strMintWarning = strMintDisabledMessage;
         LogPrintf("proof-of-stake minter disabled\n");
