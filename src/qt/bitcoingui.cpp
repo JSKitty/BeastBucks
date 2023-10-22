@@ -321,7 +321,8 @@ void BitcoinGUI::createActions()
     mintingAction->setToolTip(mintingAction->statusTip());
     mintingAction->setCheckable(true);
     mintingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
-    tabGroup->addAction(mintingAction);
+    //tabGroup->addAction(mintingAction);
+    // BeastBucksTODO: decide if this is worth adding again
 
 /*
     multisigAction = new QAction(QIcon(":/icons/multisig"), tr("&Multisig"), this);
@@ -630,7 +631,8 @@ void BitcoinGUI::createToolBars()
         toolbar->addAction(sendCoinsAction);
         toolbar->addAction(receiveCoinsAction);
         toolbar->addAction(historyAction);
-        toolbar->addAction(mintingAction);
+        //toolbar->addAction(mintingAction);
+        // BeastBucksTODO: decide if this is worth adding and testing again
         overviewAction->setChecked(true);
 
 #ifdef ENABLE_WALLET
