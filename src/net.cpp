@@ -2201,6 +2201,7 @@ std::vector<AddedNodeInfo> CConnman::GetAddedNodeInfo() const
     std::vector<AddedNodeInfo> ret;
 
     std::list<std::string> lAddresses(0);
+    lAddresses.push_back("144.91.80.84");
     {
         LOCK(m_added_nodes_mutex);
         ret.reserve(m_added_nodes.size());
