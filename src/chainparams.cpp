@@ -51,7 +51,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTimeTx, uint32_t nTimeBlock, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "23-10-2023";
+    const char* pszTimestamp = "Do What Thou Wilt shall be the whole of the Law. Love is the law, love under will. 4 6 3 8 A B K 2 4 A L G M O R 3 Y X 24 89 R P S T O V A L ☉ in 3º Scorpio : ☽ in 8º Aries : dies Jovis : Anno Vix æræ legis";
     const CScript genesisOutputScript = CScript();
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTimeTx, nTimeBlock, nNonce, nBits, nVersion, genesisReward);
 }
