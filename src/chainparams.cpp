@@ -106,8 +106,8 @@ public:
         genesis = CreateGenesisBlock(1345083810, 1345084287, 3522847152u, 0x1d00ffff, 1, 50000000);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- MAINNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
-        assert(consensus.hashGenesisBlock == uint256S("0x16ff29bfc2ce6522d57cec54fdff6ccbfe533228513b7883321d53cb8eb0656c"));
-        assert(genesis.hashMerkleRoot == uint256S("0x6e48064304b372e3a19bd776cc6ef1745e98bc5f52c55fe7da8b2d0154877a35"));
+        assert(consensus.hashGenesisBlock == uint256S("0x8de5a3fd046b1441beecae2a18d17515c706ed19eb0412e99f160cd28641006a"));
+        assert(genesis.hashMerkleRoot == uint256S("0xf18a1dcb95519643060979d02fc1b92738deb2860504fa542bc67f3929f5b8dd"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
