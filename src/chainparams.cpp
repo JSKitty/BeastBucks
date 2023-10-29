@@ -199,7 +199,7 @@ public:
         genesis = CreateGenesisBlock(1345083810, 1345090000, 122894938, 0x1d0fffff, 1, 50);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- TESTNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
-        assert(consensus.hashGenesisBlock == uint256S("0x16ff29bfc2ce6522d57cec54fdff6ccbfe533228513b7883321d53cb8eb0656c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x73d6a90acc07b22248dd0e2d8985fdafc14543532dd97dbf803ab1db1770a7c1"));
         assert(genesis.hashMerkleRoot == uint256S("0x6e48064304b372e3a19bd776cc6ef1745e98bc5f52c55fe7da8b2d0154877a35"));
 
         vFixedSeeds.clear();
