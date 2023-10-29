@@ -408,7 +408,7 @@ public:
 
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- REGNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
-        assert(consensus.hashGenesisBlock == uint256S("0x16ff29bfc2ce6522d57cec54fdff6ccbfe533228513b7883321d53cb8eb0656c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x73d6a90acc07b22248dd0e2d8985fdafc14543532dd97dbf803ab1db1770a7c1"));
         assert(genesis.hashMerkleRoot == uint256S("0x6e48064304b372e3a19bd776cc6ef1745e98bc5f52c55fe7da8b2d0154877a35"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
@@ -419,19 +419,12 @@ public:
         m_is_mockable_chain = true;
         checkpointData = {
             {
-                {0, uint256S("0x00000001f757bb737f6596503e17cd17b0658ce630cc727c0cca81aec47c9f06")},
+                {0, uint256S("0x0")},
             }
         };
 
         m_assumeutxo_data = MapAssumeutxo{
-            {
-                110,
-                {AssumeutxoHash{uint256S("0x1ebbf5850204c0bdb15bf030f47c7fe91d45c44c712697e4509ba67adb01c618")}, 110},
-            },
-            {
-                200,
-                {AssumeutxoHash{uint256S("0x51c8d11d8b5c1de51543c579736e786aa2736206d1e11e627568029ce092cf62")}, 200},
-            },
+
         };
 
         chainTxData = ChainTxData{
