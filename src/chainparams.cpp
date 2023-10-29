@@ -68,8 +68,8 @@ public:
         //consensus.BIP16Height = 0;
         consensus.BIP34Height = 10;
         consensus.BIP34Hash = uint256S("0x0");
-        consensus.powLimit =            uint256S("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~arith_uint256(0) >> 32;
-        consensus.bnInitialHashTarget = uint256S("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~arith_uint256(0) >> 40;
+        consensus.powLimit =            uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~arith_uint256(0) >> 32;
+        consensus.bnInitialHashTarget = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~arith_uint256(0) >> 40;
 
         consensus.nTargetTimespan = 7 * 24 * 60 * 60;  // one week
         consensus.nStakeTargetSpacing = 60; // 1-minute: block spacing
