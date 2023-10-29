@@ -11,7 +11,7 @@
 
 bool IsZeroAllowed(const unsigned int nTimeTx)
 {
-    return (nTimeTx >= 1447700000 ); // very crude approximation to prevent linking with kernel.cpp
+    return (nTimeTx >= 1345084290 ); // very crude approximation to prevent linking with kernel.cpp
 }
 
 bool CheckTransaction(const CTransaction& tx, TxValidationState& state)
