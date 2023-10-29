@@ -103,7 +103,7 @@ public:
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 2;
 
-        genesis = CreateGenesisBlock(1345083810, 1345084287, 3522847152u, 0x1d00ffff, 1, 50);
+        genesis = CreateGenesisBlock(1345083810, 1345084287, 3522847152u, 0x1d00ffff, 1, 50000000);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- MAINNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0x16ff29bfc2ce6522d57cec54fdff6ccbfe533228513b7883321d53cb8eb0656c"));
@@ -196,7 +196,7 @@ public:
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 1;
 
-        genesis = CreateGenesisBlock(1345083810, 1345090000, 122894938, 0x1d0fffff, 1, 50);
+        genesis = CreateGenesisBlock(1345083810, 1345090000, 122894938, 0x1d0fffff, 1, 50000000);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- TESTNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0x73d6a90acc07b22248dd0e2d8985fdafc14543532dd97dbf803ab1db1770a7c1"));
@@ -331,7 +331,7 @@ public:
         nDefaultPort = 38333;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1345083810, 1345090000, 122894938, 0x1d0fffff, 1, 50);
+        genesis = CreateGenesisBlock(1345083810, 1345090000, 122894938, 0x1d0fffff, 1, 50000000);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- SIGNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0x73d6a90acc07b22248dd0e2d8985fdafc14543532dd97dbf803ab1db1770a7c1"));
@@ -404,7 +404,7 @@ public:
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 0;
 
-        genesis = CreateGenesisBlock(1345083810, 1345090000, 122894938, 0x1d0fffff, 1, 50);
+        genesis = CreateGenesisBlock(1345083810, 1345090000, 122894938, 0x1d0fffff, 1, 50000000);
 
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- REGNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
