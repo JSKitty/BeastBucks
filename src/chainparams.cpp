@@ -200,7 +200,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- TESTNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0xaf20ac663d61dbfe3876db25072623252307ee8b64ec332667737cca02e7834c"));
-        assert(genesis.hashMerkleRoot == uint256S("0x6e48064304b372e3a19bd776cc6ef1745e98bc5f52c55fe7da8b2d0154877a35"));
+        assert(genesis.hashMerkleRoot == uint256S("0xf18a1dcb95519643060979d02fc1b92738deb2860504fa542bc67f3929f5b8dd"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -335,7 +335,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- SIGNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0xaf20ac663d61dbfe3876db25072623252307ee8b64ec332667737cca02e7834c"));
-        assert(genesis.hashMerkleRoot == uint256S("0x6e48064304b372e3a19bd776cc6ef1745e98bc5f52c55fe7da8b2d0154877a35"));
+        assert(genesis.hashMerkleRoot == uint256S("0xf18a1dcb95519643060979d02fc1b92738deb2860504fa542bc67f3929f5b8dd"));
 
         vFixedSeeds.clear();
 
@@ -409,7 +409,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("--- REGNET ---\nGenesis block hash: %s\nHash Merkle Root: %s\n", consensus.hashGenesisBlock.ToString().c_str(), genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0xaf20ac663d61dbfe3876db25072623252307ee8b64ec332667737cca02e7834c"));
-        assert(genesis.hashMerkleRoot == uint256S("0x6e48064304b372e3a19bd776cc6ef1745e98bc5f52c55fe7da8b2d0154877a35"));
+        assert(genesis.hashMerkleRoot == uint256S("0xf18a1dcb95519643060979d02fc1b92738deb2860504fa542bc67f3929f5b8dd"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();
