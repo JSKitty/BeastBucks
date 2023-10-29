@@ -66,8 +66,8 @@ public:
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
         //consensus.BIP16Height = 0;
-        consensus.BIP34Height = 339994;
-        consensus.BIP34Hash = uint256S("000000000000000237f50af4cfe8924e8693abc5bd8ae5abb95bc6d230f5953f");
+        consensus.BIP34Height = 10;
+        consensus.BIP34Hash = uint256S("0x0");
         consensus.powLimit =            uint256S("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~arith_uint256(0) >> 32;
         consensus.bnInitialHashTarget = uint256S("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~arith_uint256(0) >> 40;
 
@@ -78,7 +78,7 @@ public:
         consensus.nStakeMinAge = 60; // 1-minute: minimum age for coin age // BeastBucksTODO
         consensus.nStakeMaxAge = 120;// BeastBucksTODO
         consensus.nModifierInterval = 6 * 60 * 60; // Modifier interval: time to elapse before new modifier is computed // BeastBucksTODO
-        consensus.nCoinbaseMaturity = 1; // BeastBucksTODO
+        consensus.nCoinbaseMaturity = 25; // BeastBucksTODO
 
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -99,7 +99,7 @@ public:
         pchMessageStart[1] = 0xe8;
         pchMessageStart[2] = 0xe9;
         pchMessageStart[3] = 0xe6;
-        nDefaultPort = 9901;
+        nDefaultPort = 9393;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 2;
 
@@ -135,7 +135,7 @@ public:
 
         checkpointData = {
             {
-                {     0, uint256S("0x0000000032fe677166d54963b62a4677d8957e87c508eaa4fd7eb1c880cd27e3")},
+                {     0, uint256S("0x0")},
             }
         };
 
